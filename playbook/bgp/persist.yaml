@@ -10,5 +10,4 @@
         actions:
           - name: persist
         origin: git@github.com:rohitthakur2590/network_validated_content_automation.git
-        # origin: git@github.com:rohitthakur2590/network_validated_content_host_vars.git
-        # origin: git@github.com:rohitthakur2590/network_validated_content_demo.git
+   
