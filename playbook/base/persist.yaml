@@ -1,0 +1,20 @@
+---
+- hosts: rtr1
+  gather_facts: true
+  tasks:
+    - name: Network BGP Manager
+      ansible.builtin.include_role:
+        name: network.base.resource_manager
+      vars:
+        action: persist
+        ansible_network_os: cisco.ios.ios
+        resources:
+          - 'interfaces'
+          - 'l2_interfaces'
+          - 'l3_interfaces'
+          - 'bgp_global'
+          - 'bgp_address_family'
+          - 'ospfv2'
+          - 'ospfv3'
+          - 'ospf_interfaces'
+        origin: git@github.com:rohitthakur2590/network_validated_content_automation.git
