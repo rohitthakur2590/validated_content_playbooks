@@ -1,0 +1,14 @@
+---
+- hosts: rtr1
+  gather_facts: true
+  tasks:
+    - name: Network BGP Manager
+      ansible.builtin.include_role:
+        name: network.bgp.run
+      vars:
+        ansible_network_os: cisco.ios.ios
+        actions:
+          - name: persist
+        origin: git@github.com:rohitthakur2590/network_validated_content_automation.git
+        # origin: git@github.com:rohitthakur2590/network_validated_content_host_vars.git
+        # origin: git@github.com:rohitthakur2590/network_validated_content_demo.git
