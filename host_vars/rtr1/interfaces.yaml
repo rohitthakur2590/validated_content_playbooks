@@ -1,6 +1,6 @@
 interfaces:
--   duplex: auto
-    description: "ISP1 GW-1" 
+-   description: ISP1 GW-1
+    duplex: auto
     enabled: true
     name: GigabitEthernet0/0
     speed: auto
