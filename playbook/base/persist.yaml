@@ -19,4 +19,5 @@
           - 'ospf_interfaces'
         origin: https://github.com/rohitthakur2590/network_validated_content_automation.git
 #         origin: git@github.com:rohitthakur2590/network_validated_content_automation.git
+        token: ${{ secrets.GITHUB_TOKEN }} 
 #         token: "{{ lookup('env', 'GH_TOKEN') }}"
