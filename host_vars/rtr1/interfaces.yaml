@@ -1,6 +1,6 @@
 interfaces:
--   duplex: auto
-    description: "Anwible" 
+-   description: Anwible
+    duplex: auto
     enabled: true
     name: GigabitEthernet0/0
     speed: auto
