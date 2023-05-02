@@ -1,6 +1,6 @@
 interfaces:
 -   duplex: auto
-    description: "ISP1" 
+    description: "ISP2" 
     enabled: true
     name: GigabitEthernet0/0
     speed: auto
