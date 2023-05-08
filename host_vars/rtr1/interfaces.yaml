@@ -1,6 +1,6 @@
 interfaces:
--   duplex: auto
-    description: "Ansible ISP1" 
+-   description: Ansible ISP1
+    duplex: auto
     enabled: true
     name: GigabitEthernet0/0
     speed: auto
