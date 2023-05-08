@@ -1,0 +1,33 @@
+ospf_interfaces:
+-   address_family:
+    -   afi: ipv4
+        process:
+            area_id: '0'
+            id: 110
+    name: Loopback27
+-   address_family:
+    -   afi: ipv4
+        process:
+            area_id: '0'
+            id: 110
+    name: Loopback28
+-   address_family:
+    -   afi: ipv4
+        process:
+            area_id: '0'
+            id: 110
+    name: Loopback29
+-   address_family:
+    -   afi: ipv4
+        process:
+            area_id: '0'
+            id: 110
+    name: Loopback37
+-   name: Loopback38
+-   name: Loopback39
+-   name: GigabitEthernet0/0
+-   name: GigabitEthernet0/1
+-   name: GigabitEthernet0/2
+-   name: GigabitEthernet0/3
+-   name: GigabitEthernet0/4
+-   name: GigabitEthernet0/5
