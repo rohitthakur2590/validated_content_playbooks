@@ -1,6 +1,6 @@
 interfaces:
--   duplex: auto
-    description: "Ansible" 
+-   description: deploy
+    duplex: auto
     enabled: true
     name: GigabitEthernet0/0
     speed: auto
