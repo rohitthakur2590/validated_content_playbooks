@@ -18,7 +18,6 @@
           - 'ospfv3'
           - 'ospf_interfaces'
         data_store:
-          local: "~/backup/network"
           scm:  
             origin:
               url: https://github.com/rohitthakur2590/network_validated_content_automation.git
