@@ -1,0 +1,22 @@
+---
+- hosts: network
+  gather_facts: true
+  tasks:
+    - name: Network Resource Manager
+      ansible.builtin.include_role:
+        name: network.base.resource_manager
+      vars:
+        action: persist
+        ansible_network_os: cisco.ios.ios
+        resources:
+          - 'interfaces'
+          - 'l2_interfaces'
+          - 'l3_interfaces'
+        data_store:
+          scm:  
+            origin:
+              url: https://github.com/rohitthakur2590/network_validated_content_automation.git
+              token: "{{ lookup('env', 'VALIDATED_RO_KEY') }}"
+              user:
+                name: rohitthakur2590
+                email: rohitthakur2590@outlook.com
