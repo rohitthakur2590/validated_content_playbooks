@@ -13,7 +13,7 @@
         data_store:
           scm:  
             origin:
-              url: https://github.com/rohitthakur2590/network_automation_backups.git
+              url: https://github.com/rohitthakur2590/network_validated_content_automation.git
               token: "{{ VALIDATED_RO_KEY }}"
               user:
                 name: rohitthakur2590
