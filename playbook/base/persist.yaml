@@ -1,5 +1,5 @@
 ---
-- hosts: rtr1
+- hosts: ios
   gather_facts: true
   tasks:
     - name: Network Resource Manager
