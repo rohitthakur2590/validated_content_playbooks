@@ -1,3 +1,4 @@
 interfaces:
 -   enabled: true
     name: GigabitEthernet1
+    description: "Managed By Ansible"
