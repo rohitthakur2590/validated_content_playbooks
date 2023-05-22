@@ -1,5 +1,5 @@
 ---
-- hosts: network
+- hosts: rtr1
   gather_facts: true
   tasks:
     - name: Network Resource Manager
