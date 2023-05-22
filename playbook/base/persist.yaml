@@ -1,5 +1,5 @@
 ---
-- hosts: ios
+- hosts: network
   gather_facts: true
   tasks:
     - name: Network Resource Manager
