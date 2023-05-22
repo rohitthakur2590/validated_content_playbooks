@@ -2,6 +2,18 @@
 - hosts: network
   gather_facts: true
   tasks:
+    - name: Reset Config
+      ansible.builtin.include_role:
+        name: network.base.resource_manager
+      vars:
+        action: configure
+        ansible_network_os: cisco.ios.ios
+        resource: interfaces
+        config:
+          - name: "GigabitEthernet1"
+            description: "Need to update this"
+        state: merged
+  
     - name: Network Resource Manager
       ansible.builtin.include_role:
         name: network.base.resource_manager
