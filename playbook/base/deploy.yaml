@@ -11,7 +11,7 @@
         resources:
           - 'interfaces'
         data_store:
-          local: "/home/rhel"
+          local: /home/rhel
 #           scm:  
 #             origin:
 #               url: "https://github.com/rohitthakur2590/network_validated_content_automation.git"
