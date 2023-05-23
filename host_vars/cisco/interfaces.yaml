@@ -1,6 +1,6 @@
 interfaces:
--   enabled: true
+-   description: Need to update this
+    enabled: true
     name: GigabitEthernet1
-    decsription: "Configured with Ansible Network Validated Content"
 -   enabled: true
     name: VirtualPortGroup0
