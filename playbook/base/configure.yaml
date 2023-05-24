@@ -10,6 +10,9 @@
       ansible_network_os: cisco.ios.ios
       resource: interfaces
       config:
-        - name: "GigabitEthernet0/0"
-          description: "Edited with Configure operation"
+        - enabled: true
+          name: GigabitEthernet1
+          decsription: "Configured with Ansible Network Validated Content"
+        - enabled: true
+          name: VirtualPortGroup0
       state: merged
