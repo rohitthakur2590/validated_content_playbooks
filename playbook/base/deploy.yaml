@@ -7,6 +7,10 @@
   become_user: rhel
   become_flags: '-s /bin/bash'
   tasks:
+    - name: 00. change to gpadmin user and enable gpperfmon collection
+      shell: source /home/rhel/.bashrc
+      become: yes
+      become_user: rhel
     - name: Network Resource Manager
       ansible.builtin.include_role:
         name: network.base.resource_manager
