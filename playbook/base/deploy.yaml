@@ -1,6 +1,7 @@
 ---
 - hosts: network
   gather_facts: true
+  remote_user: rhel
   become: true
   become_method: su
   become_user: rhel
