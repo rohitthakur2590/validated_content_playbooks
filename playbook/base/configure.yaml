@@ -1,0 +1,15 @@
+---
+- hosts: network
+  gather_facts: true
+  tasks:
+  - name: Network Resource Manager
+    ansible.builtin.include_role:
+      name: network.base.resource_manager
+    vars:
+      action: configure
+      ansible_network_os: cisco.ios.ios
+      resource: interfaces
+      config:
+        - name: "GigabitEthernet0/0"
+          description: "Edited with Configure operation"
+      state: merged
