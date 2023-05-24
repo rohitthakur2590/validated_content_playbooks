@@ -7,7 +7,7 @@
   become_user: rhel
   become_flags: '-s /bin/bash'
   tasks:
-    - name: 00. change to gpadmin user and enable gpperfmon collection
+    - name: Change to user
       shell: source /home/rhel/.bashrc
       become: yes
       become_user: rhel
