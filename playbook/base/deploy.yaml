@@ -2,7 +2,9 @@
 - hosts: network
   gather_facts: true
   become: true
+  become_method: su
   become_user: rhel
+  become_flags: '-s /bin/bash'
   tasks:
     - name: Network Resource Manager
       ansible.builtin.include_role:
