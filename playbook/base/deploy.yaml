@@ -21,7 +21,7 @@
           - 'interfaces'
         data_store:
           local: /home/rhel/network_validated_content_automation
-      delegate_to: localhost
+#       delegate_to: localhost
 #           scm:  
 #             origin:
 #               url: "https://github.com/rohitthakur2590/network_validated_content_automation.git"
