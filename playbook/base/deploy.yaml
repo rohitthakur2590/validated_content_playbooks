@@ -1,6 +1,7 @@
 ---
 - hosts: network
   gather_facts: true
+  become: yes
   become_user: rhel
   tasks:
     - name: Network Resource Manager
