@@ -19,14 +19,14 @@
         ansible_network_os: cisco.ios.ios
         resources:
           - 'interfaces'
-        data_store:
-          local: /home/rhel/network_validated_content_automation
+#         data_store:
+#           local: /home/rhel/network_validated_content_automation
 #       delegate_to: localhost
-#           scm:  
-#             origin:
-#               url: "https://github.com/rohitthakur2590/network_validated_content_automation.git"
-#               token: "{{ lookup('env', 'VALIDATED_RO_KEY') }}"
-# #               token: "{{ VALIDATED_RO_KEY }}"
-#               user:
-#                 name: rohitthakur2590
-#                 email: rohitthakur2590@outlook.com
+          scm:  
+            origin:
+              url: "https://github.com/rohitthakur2590/network_validated_content_automation.git"
+              token: "{{ lookup('env', 'VALIDATED_RO_KEY') }}"
+#               token: "{{ VALIDATED_RO_KEY }}"
+              user:
+                name: rohitthakur2590
+                email: rohitthakur2590@outlook.com
