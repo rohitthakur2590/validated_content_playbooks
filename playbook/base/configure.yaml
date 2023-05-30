@@ -12,7 +12,7 @@
       config:
         - enabled: true
           name: GigabitEthernet1
-          description: "Configured with Ansible Network Validated Content"
+          description: "Configured with Ansible Network Validated Content Configure Action"
         - enabled: true
           name: VirtualPortGroup0
       state: merged
