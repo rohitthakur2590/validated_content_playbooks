@@ -19,7 +19,7 @@
         ansible_network_os: cisco.ios.ios
         resources:
           - 'interfaces'
-#         data_store:
+        data_store:
 #           local: /home/rhel/network_validated_content_automation
 #       delegate_to: localhost
           scm:  
