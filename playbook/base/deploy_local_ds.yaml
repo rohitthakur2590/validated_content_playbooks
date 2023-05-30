@@ -13,4 +13,5 @@
         resources:
           - 'interfaces'
         data_store:
-          local: /home/rhel/network_validated_content_automation
+          local: /home/rhel
+#           local: /home/rhel/network_validated_content_automation
