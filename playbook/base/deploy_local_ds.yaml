@@ -1,8 +1,8 @@
 ---
 - hosts: network
   gather_facts: true
-  become: true
-  become_user: rhel
+#   become: true
+#   become_user: rhel
   tasks:
     - name: Network Resource Manager
       ansible.builtin.include_role:
