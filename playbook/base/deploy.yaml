@@ -23,7 +23,7 @@
 #           local: /home/rhel/network_validated_content_automation
 #       delegate_to: localhost
           scm:  
-            parent_directory: "/home/rhel"
+#             parent_directory: "/home/rhel"
             origin:
               url: "https://github.com/rohitthakur2590/network_validated_content_automation.git"
               token: "{{ lookup('env', 'VALIDATED_RO_KEY') }}"
