@@ -1,5 +1,5 @@
 ---
-- hosts: network
+- hosts: rtr1
   gather_facts: true
 #   remote_user: rhel
 #   become: true
