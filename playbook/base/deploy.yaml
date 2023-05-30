@@ -1,16 +1,7 @@
 ---
 - hosts: rtr1
   gather_facts: true
-#   remote_user: rhel
-#   become: true
-#   become_method: su
-#   become_user: rhel
-#   become_flags: '-s /bin/bash'
   tasks:
-#     - name: Change to user
-#       shell: source /home/rhel/.bashrc
-#       become: yes
-#       become_user: rhel
     - name: Network Resource Manager
       ansible.builtin.include_role:
         name: network.base.resource_manager
@@ -20,14 +11,12 @@
         resources:
           - 'interfaces'
         data_store:
-#           local: /home/rhel/network_validated_content_automation
-#       delegate_to: localhost
           scm:  
-#             parent_directory: "/home/rhel"
+            parent_directory: "/home/rhel"
             origin:
               url: "https://github.com/rohitthakur2590/network_validated_content_automation.git"
-              token: "{{ lookup('env', 'VALIDATED_RO_KEY') }}"
-#               token: "{{ VALIDATED_RO_KEY }}"
+#               token: "{{ lookup('env', 'VALIDATED_RO_KEY') }}"
+              token: "{{ VALIDATED_RO_KEY }}"
               user:
                 name: rohitthakur2590
                 email: rohitthakur2590@outlook.com
