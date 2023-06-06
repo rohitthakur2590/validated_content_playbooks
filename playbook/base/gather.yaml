@@ -7,7 +7,7 @@
         name: network.base.resource_manager
       vars:
         ansible_network_os: cisco.ios.ios
-        action: gather
+        operation: gather
         resources:
           - 'interfaces'
           - 'l2_interfaces'
