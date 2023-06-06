@@ -6,6 +6,6 @@
     ansible.builtin.include_role:
       name: network.base.resource_manager
     vars:
-      action: list
+      operation: list
       ansible_network_os: cisco.ios.ios
  
