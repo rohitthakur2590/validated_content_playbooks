@@ -30,6 +30,6 @@
           - 'ospfv3'
           - 'ospf_interfaces'
         data_store:
-          local: "/home/rhel"
+          local: "/home/rhel/network_inventory"
  
  
