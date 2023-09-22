@@ -1,0 +1,35 @@
+---
+- hosts: network
+  gather_facts: true
+  tasks:
+    - name: Reset Config
+      ansible.builtin.include_role:
+        name: network.base.resource_manager
+      vars:
+        operation: configure
+        ansible_network_os: cisco.ios.ios
+        resource: interfaces
+        config:
+          - name: "GigabitEthernet1"
+            description: "Need to update this"
+        state: merged
+  
+    - name: Network Resource Manager
+      ansible.builtin.include_role:
+        name: network.base.resource_manager
+      vars:
+        operation: persist
+        ansible_network_os: cisco.ios.ios
+        resources:
+          - 'interfaces'
+          - 'l2_interfaces'
+          - 'l3_interfaces'
+          - 'bgp_global'
+          - 'bgp_address_family'
+          - 'ospfv2'
+          - 'ospfv3'
+          - 'ospf_interfaces'
+        data_store:
+          local: "/home/rhel"
+ 
+ 
