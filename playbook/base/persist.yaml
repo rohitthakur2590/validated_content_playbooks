@@ -17,7 +17,8 @@
     - block: 
       - name: Set Timestamp
         ansible.builtin.set_fact:
-          time: "{{ lookup('pipe', 'date \"+%Y-%m-%d-%r\"') }}"
+          time: "{{ lookup('pipe', 'date \"+%Y-%m-%d\"') }}"
+          num: "{{ 100 | random }}"  
         
       - name: Network Resource Manager
         ansible.builtin.include_role:
@@ -41,7 +42,7 @@
                 url: https://github.com/rohitthakur2590/network_validated_content_automation.git
                 token: "{{ VALIDATED_RO_KEY }}"
                 tag:
-                  annotation: "demo-tag_{{ time.split(' ')[0] }}"
+                  annotation: "demo-tag_{{ time }}_{{ num }}"
                   message: "backup_config"
                 user:
                   name: rohitthakur2590
