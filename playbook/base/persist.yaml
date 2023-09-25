@@ -17,7 +17,7 @@
     - block: 
       - name: Set Timestamp
         ansible.builtin.set_fact:
-          time: "{{ lookup('pipe', 'date \"+%Y-%m-%d\"') }}"
+          time: "{{ lookup('pipe', 'date \"+%Y-%m-%d-%r\"') }}"
         
       - name: Network Resource Manager
         ansible.builtin.include_role:
