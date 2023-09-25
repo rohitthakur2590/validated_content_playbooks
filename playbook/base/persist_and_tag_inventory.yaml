@@ -1,0 +1,50 @@
+---
+- hosts: network
+  gather_facts: true
+  tasks:
+    - name: Reset Config
+      ansible.builtin.include_role:
+        name: network.base.resource_manager
+      vars:
+        operation: configure
+        ansible_network_os: cisco.ios.ios
+        resource: interfaces
+        config:
+          - name: "GigabitEthernet1"
+            description: "Need to update this"
+        state: merged
+  
+    - name: Network Resource Manager
+      ansible.builtin.include_role:
+        name: network.base.resource_manager
+      vars:
+        operation: persist
+        ansible_network_os: cisco.ios.ios
+        resources:
+          - 'interfaces'
+          - 'l2_interfaces'
+          - 'l3_interfaces'
+          - 'bgp_global'
+          - 'bgp_address_family'
+          - 'ospfv2'
+          - 'ospfv3'
+          - 'ospf_interfaces'
+        data_store:
+          scm:
+            parent_directory: "/home/rhel"
+            origin:
+              url: https://github.com/rohitthakur2590/network_validated_content_automation.git
+              token: "{{ VALIDATED_RO_KEY }}"
+              user:
+                name: rohitthakur2590
+                email: rohitthakur2590@outlook.com
+
+
+    - name: Tag inventory and publish
+      ansible.scm.git_publish:
+        tag:
+          annotation: "temp3"
+          message: "backup_config"
+        path: "/home/rhel/network_validated_content_automation"
+        token: "{{ VALIDATED_RO_KEY }}"
+ 
