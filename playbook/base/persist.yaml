@@ -41,7 +41,7 @@
                 url: https://github.com/rohitthakur2590/network_validated_content_automation.git
                 token: "{{ VALIDATED_RO_KEY }}"
                 tag:
-                  annotation: "demo-tag_{{ time }}"
+                  annotation: "demo-tag_{{ time.split(' ')[0] }}"
                   message: "backup_config"
                 user:
                   name: rohitthakur2590
