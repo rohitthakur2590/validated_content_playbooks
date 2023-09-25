@@ -50,3 +50,7 @@
           message: "backup_config"
         path: "/home/rhel/network_validated_content_automation"
         token: "{{ VALIDATED_RO_KEY }}"
+        user:
+          name: rohitthakur2590
+          email: rohitthakur2590@outlook.com
+
