@@ -39,12 +39,14 @@
                 name: rohitthakur2590
                 email: rohitthakur2590@outlook.com
 
-
+    - name: Set Timestamp
+      ansible.builtin.set_fact:
+        time: "{{ lookup('pipe', 'date \"+%Y-%m-%d\"') }}"
+    
     - name: Tag inventory and publish
       ansible.scm.git_publish:
         tag:
-          annotation: "temp3"
+          annotation: "Demo: {{ time }}"
           message: "backup_config"
         path: "/home/rhel/network_validated_content_automation"
         token: "{{ VALIDATED_RO_KEY }}"
- 
