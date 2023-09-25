@@ -6,7 +6,7 @@
       ansible.builtin.include_role:
         name: network.base.resource_manager
       vars:
-        ansible_network_os: cisco.ios.ios
+        # ansible_network_os: cisco.ios.ios
         operation: gather
         resources:
           - 'interfaces'
