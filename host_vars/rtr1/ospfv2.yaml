@@ -1,0 +1,16 @@
+ospfv2:
+    processes:
+    -   network:
+        -   address: 10.0.12.1
+            area: '0'
+            wildcard_bits: 0.0.0.0
+        -   address: 11.0.13.1
+            area: '0'
+            wildcard_bits: 0.0.0.0
+        process_id: 110
+        router_id: 1.1.1.1
+    -   max_metric:
+            on_startup:
+                time: 100
+            router_lsa: true
+        process_id: 111
