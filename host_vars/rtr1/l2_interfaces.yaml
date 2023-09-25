@@ -1,0 +1,13 @@
+l2_interfaces:
+-   name: Loopback27
+-   name: Loopback28
+-   name: Loopback29
+-   name: Loopback37
+-   name: Loopback38
+-   name: Loopback39
+-   name: GigabitEthernet0/0
+-   name: GigabitEthernet0/1
+-   name: GigabitEthernet0/2
+-   name: GigabitEthernet0/3
+-   name: GigabitEthernet0/4
+-   name: GigabitEthernet0/5
