@@ -36,22 +36,25 @@
               origin:
                 url: https://github.com/rohitthakur2590/network_validated_content_automation.git
                 token: "{{ VALIDATED_RO_KEY }}"
+                tag:
+                  annotation: "Demo-Tag"
+                  message: "backup_config"
                 user:
                   name: rohitthakur2590
                   email: rohitthakur2590@outlook.com
 
-      - name: Set Timestamp
-        ansible.builtin.set_fact:
-          time: "{{ lookup('pipe', 'date \"+%Y-%m-%d\"') }}"
+      # - name: Set Timestamp
+      #   ansible.builtin.set_fact:
+      #     time: "{{ lookup('pipe', 'date \"+%Y-%m-%d\"') }}"
     
-      - name: Tag inventory and publish
-        ansible.scm.git_publish:
-          tag:
-            annotation: "Demo: {{ time }}"
-            message: "backup_config"
-          path: "/home/rhel/network_validated_content_automation"
-          token: "{{ VALIDATED_RO_KEY }}"
-          user:
-            name: rohitthakur2590
-            email: rohitthakur2590@outlook.com
+      # - name: Tag inventory and publish
+      #   ansible.scm.git_publish:
+      #     tag:
+      #       annotation: "Demo: {{ time }}"
+      #       message: "backup_config"
+      #     path: "/home/rhel/network_validated_content_automation"
+      #     token: "{{ VALIDATED_RO_KEY }}"
+      #     user:
+      #       name: rohitthakur2590
+      #       email: rohitthakur2590@outlook.com
 
