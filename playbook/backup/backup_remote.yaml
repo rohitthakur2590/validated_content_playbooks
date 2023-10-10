@@ -1,0 +1,13 @@
+- name: Create Network Backup Play
+  hosts: network
+  tasks:
+    - name: Create Network Backup
+      ansible.builtin.include_role:
+        name: network.backup.run
+      vars:
+        operation: backup
+        data_store:
+          scm:
+            origin:
+              url: "https://github.com/rohitthakur2590/network_automation_backups"
+              token: "{{ VALIDATED_RO_KEY }}"

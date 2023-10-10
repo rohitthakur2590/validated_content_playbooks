@@ -1,0 +1,14 @@
+---
+- name: Detect Network Backup Diff
+  hosts: network
+  gather_facts: true
+  tasks:
+    - name: Detect Diff
+      ansible.builtin.include_role:
+        name: network.backup.run
+      vars:
+        operation: detect
+        data_store:
+          scm:
+            origin:
+              url: "https://github.com/rohitthakur2590/network_automation_backups"

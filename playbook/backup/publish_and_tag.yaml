@@ -1,0 +1,22 @@
+---
+- name: Publish And Tag Network Backup
+  hosts: network
+  tasks:
+    - name: Set Timestamp
+      ansible.builtin.set_fact:
+        time: "{{ lookup('pipe', 'date \"+%Y-%m-%d\"') }}"
+        num: "{{ 100 | random }}"
+
+    - name: Create, Publish and Tag Network Backup
+      ansible.builtin.include_role:
+        name: network.backup.run
+      vars:
+        operation: backup
+        tag:
+          annotation: "{{ time }}"
+          message: "backup_on for group network on : {{ time }}"
+        data_store:
+          scm:
+            origin:
+              url: "https://github.com/rohitthakur2590/network_automation_backups"
+              token: "{{ VALIDATED_RO_KEY }}"
