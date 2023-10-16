@@ -6,6 +6,7 @@
         name: network.backup.run
       vars:
         operation: backup
+        ansible_network_os: cisco.ios.ios 
         data_store:
           scm:
             origin:
