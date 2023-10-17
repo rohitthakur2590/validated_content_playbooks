@@ -12,6 +12,7 @@
         name: network.backup.run
       vars:
         operation: backup
+        ansible_network_os: cisco.ios.ios  
         tag:
           annotation: "{{ time }}"
           message: "backup_on for group network on : {{ time }}"
