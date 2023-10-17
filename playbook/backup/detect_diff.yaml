@@ -1,6 +1,6 @@
 ---
 - name: Detect Network Backup Diff
-  hosts: network
+  hosts: network_diff
   gather_facts: true
   tasks:
     - name: Detect Diff
