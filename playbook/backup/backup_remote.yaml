@@ -10,5 +10,6 @@
         data_store:
           scm:
             origin:
-              url: "https://github.com/rohitthakur2590/network_automation_backups"
-              token: "{{ VALIDATED_RO_KEY }}"
+              # url: "https://github.com/rohitthakur2590/network_automation_backups"
+              url: "https://podman-3000-4ogb3mexnv5h.env.play.instruqt.com:3000/student/demo_network_backups.git"
+              # token: "{{ VALIDATED_RO_KEY }}"
