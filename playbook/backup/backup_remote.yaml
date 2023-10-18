@@ -11,5 +11,5 @@
           scm:
             origin:
               url: "https://podman-3000-trvbwkpaqo7u.env.play.instruqt.com:3000/student/network_automation_backups"   
-              url: "https://github.com/rohitthakur2590/network_automation_backups"
-              token: "{{ VALIDATED_RO_KEY }}"
+              # url: "https://github.com/rohitthakur2590/network_automation_backups"
+              # token: "{{ VALIDATED_RO_KEY }}"
