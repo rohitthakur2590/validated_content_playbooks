@@ -1,0 +1,8 @@
+l3_interfaces:
+-   ipv4:
+    -   dhcp:
+            enable: true
+    name: GigabitEthernet1
+-   ipv4:
+    -   address: 192.168.35.101/24
+    name: VirtualPortGroup0
