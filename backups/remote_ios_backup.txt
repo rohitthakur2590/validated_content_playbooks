@@ -13,7 +13,7 @@ platform qfp utilization monitor load 80
 platform punt-keepalive disable-kernel-core
 platform console virtual
 !
-hostname remote_restore
+hostname remote_restore_ios
 !
 boot-start-marker
 boot-end-marker
@@ -153,7 +153,7 @@ redundancy
 !
 !
 interface GigabitEthernet1
- description mgmt interface
+ description ios mgmt interface
  ip dhcp client client-id ascii 99QA0DQTZQS
  ip address dhcp
  negotiation auto
