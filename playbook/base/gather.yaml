@@ -12,3 +12,12 @@
           - 'interfaces'
           - 'l2_interfaces'
           - 'l3_interfaces'
+    
+    - name: Read the content of the file
+      ansible.builtin.slurp:
+        src: "/etc/ansible_rh.log"
+      register: file_content
+
+    - name: Display the content of the file
+      ansible.builtin.debug:
+        msg: "{{ file_content.content | b64decode }}"
