@@ -12,6 +12,7 @@
           - 'interfaces'
           - 'l2_interfaces'
           - 'l3_interfaces'
+       ignore_errors: true
     
     - name: Read the content of the file
       ansible.builtin.slurp:
