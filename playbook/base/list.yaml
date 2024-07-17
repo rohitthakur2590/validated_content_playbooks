@@ -10,7 +10,7 @@
       ansible_network_os: cisco.ios.ios
   - name: Read the content of the file
     ansible.builtin.slurp:
-      src: "/etc/ansible_rh.log"
+      src: "/tmp/ansible_rh.log"
     register: file_content
 
   - name: Display the content of the file
