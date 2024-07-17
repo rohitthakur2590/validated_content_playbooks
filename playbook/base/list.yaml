@@ -1,6 +1,6 @@
 ---
 - hosts: network
-  gather_facts: true
+  gather_facts: false
   tasks:
   - name: Network Resource Manager
     ansible.builtin.include_role:
@@ -8,4 +8,12 @@
     vars:
       operation: list
       ansible_network_os: cisco.ios.ios
+  - name: Read the content of the file
+      ansible.builtin.slurp:
+        src: "/etc/ansible_rh.log"
+      register: file_content
+
+  - name: Display the content of the file
+      ansible.builtin.debug:
+        msg: "{{ file_content.content | b64decode }}"
  
