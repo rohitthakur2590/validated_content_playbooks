@@ -1,6 +1,6 @@
 ---
 - hosts: network
-  gather_facts: true
+  gather_facts: false
   tasks:
     - name: Network Resource Manager
       ansible.builtin.include_role:
