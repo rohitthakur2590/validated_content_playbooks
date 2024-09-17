@@ -1,7 +1,7 @@
 interfaces:
--   enabled: true
+-   description: Need to update this
+    enabled: true
     name: GigabitEthernet1
-    description: "Configured with Ansible Network Validated Content Deploy Operation"
 -   enabled: true
     name: VirtualPortGroup0
     description: "Configured with Ansible Network Validated Content Deploy Operation"
